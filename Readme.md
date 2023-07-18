@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/launch-countdowntimer-app-using-react-vite-and-tailwindcss-x7fx6JdKDR)
+- Live Site URL: [Live](https://coutdown-timer298.web.app/)
 
 ## My process
 
