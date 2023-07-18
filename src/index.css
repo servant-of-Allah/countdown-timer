@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.shadow {
+  -webkit-box-shadow: 0px 8px 1px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 8px 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+@layer components {
+  .main {
+    background: bottom / 200% no-repeat url("images/pattern-hills.svg"),
+      center / 100% no-repeat url("images/bg-stars.svg"), hsl(234, 17%, 12%);
+  }
+
+  .top::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 100vmax;
+    background-color: hsl(234, 17%, 12%);
+    bottom: -4px;
+    left: -4px;
+
+    @apply md:w-[12px] md:h-[12px] md:bottom-[-6px] md:left-[-6px];
+  }
+
+  .top::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 100vmax;
+    background-color: hsl(234, 17%, 12%);
+    bottom: -4px;
+    right: -4px;
+
+    @apply md:w-[12px] md:h-[12px] md:bottom-[-6px] md:right-[-6px];
+  }
+
+  .bottom::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 100vmax;
+    background-color: hsl(234, 17%, 12%);
+    top: -4px;
+    left: -4px;
+
+    @apply md:w-[12px] md:h-[12px] md:top-[-6px] md:left-[-6px];
+  }
+
+  .bottom::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 100vmax;
+    background-color: hsl(234, 17%, 12%);
+    top: -4px;
+    right: -4px;
+
+    @apply md:w-[12px] md:h-[12px] md:top-[-6px] md:right-[-6px];
+  }
+
+  .top {
+    transform-origin: bottom;
+  }
+
+  .bottom {
+    transform-origin: top;
+  }
+
+  .flip-top-anim {
+    animation: flip-top 250ms ease-in;
+  }
+
+  .flip-bottom {
+    animation: flip-bottom 250ms 250ms ease-out forwards;
+  }
+
+  @keyframes flip-top {
+    0% {
+      transform: rotateX(0deg);
+    }
+    100% {
+      transform: rotateX(90deg);
+    }
+  }
+
+  @keyframes flip-bottom {
+    0% {
+      transform: rotateX(-90deg);
+    }
+    100% {
+      transform: rotateX(0deg);
+    }
+  }
+
+  @screen md {
+    .main {
+      background: bottom / 100% no-repeat url("images/pattern-hills.svg"),
+        center / 100% no-repeat url("images/bg-stars.svg"), hsl(234, 17%, 12%);
+    }
+  }
+}
